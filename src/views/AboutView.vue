@@ -1,0 +1,77 @@
+<template>
+    <main>
+        <div class="heading">
+            <span>Recommend a </span><br>
+            <span>Show</span>
+        </div>
+        <div class="tag">
+            <p><strong>Show Recommender helps you discover new TV shows.</strong></p>
+        </div>
+        <div class="my-buttons">
+            <button type="button" class="btn btn-outline-dark" @click="routeLogin">Sign In</button>
+        </div>
+    </main>
+</template>
+
+<script>
+import router from '../router';
+
+export default {
+    data() {
+        return {
+
+        }
+    },
+    components: {
+    },
+    methods: {
+        async routeLogin() {
+            router.push("/login")
+        }
+    }
+}
+</script>
+
+<style lang="scss">
+    main{
+        width: auto;
+
+        .heading{
+            text-align: center;
+
+            span{
+                font-size:100px;
+                font-weight: bold;
+                font-style: italic;
+                color: #1aae9f;
+                @media (max-width: 1024px) {
+                    font-size:10vw;
+                }
+            }
+        }
+        .tag{
+            p{
+                text-align: center;
+            }
+        }
+
+        .my-buttons{
+            margin-top: 25%;
+            display: flex;
+            justify-content:space-between;
+
+            @media (max-width: 1204px) {
+                flex-direction: column;
+            }
+
+            button{
+                    margin: auto;
+                    width: 100%;
+                }
+        }
+
+        @media (max-width: 1024px) {
+            margin-top: 20%;
+        }
+    }
+</style>

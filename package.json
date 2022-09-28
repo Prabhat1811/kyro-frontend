@@ -1,0 +1,28 @@
+{
+  "name": "kyro_frontend",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "serve": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.2.1",
+    "express": "^4.18.1",
+    "pinia": "^2.0.21",
+    "vue": "^3.2.40",
+    "vue-cookies": "^1.8.1",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/compiler-sfc": "^3.2.40",
+    "node-sass": "^7.0.3",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.2",
+    "vite": "^3.0.9"
+  }
+}
