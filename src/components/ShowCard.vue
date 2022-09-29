@@ -72,6 +72,8 @@ export default {
                 //handle error
                 console.log(response)
             })
+
+            return false;
         },
     }
 }
