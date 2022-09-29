@@ -2,7 +2,7 @@
   "name": "kyro_frontend",
   "version": "0.0.0",
   "scripts": {
-    "start": "vue-cli-service serve",
+    "start": "node server.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
