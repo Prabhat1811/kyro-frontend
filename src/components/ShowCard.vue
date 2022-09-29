@@ -17,7 +17,7 @@
                 <li class="list-group-item"></li>
             </ul>
             <div class="card-body">
-                <a href="#" class="card-link" @click="likeShow(id)">Like</a>
+                <a href="#" class="card-link" @click="likeShow()">Like</a>
             </div>
         </div>
     </div>
@@ -53,6 +53,10 @@ export default {
     methods: {
         async likeShow(){
 
+            $('.card-link').click(function($e){
+                $e.preventDefault()
+            })
+
             const headers = {
                 "Content-Type": "application/json",
                 "Authorization": $cookies.get("access_token")
@@ -72,8 +76,6 @@ export default {
                 //handle error
                 console.log(response)
             })
-
-            return false;
         },
     }
 }
