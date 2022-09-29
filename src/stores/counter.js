@@ -6,8 +6,13 @@ export const myStore = defineStore({
   state: () => ({
     // loginURL: "http://127.0.0.1:8000/login?include_auth_token",
     loginURL: "https://kyro-show-recommender-backend.herokuapp.com/login?include_auth_token",
+
+    // logoutURL: "http://127.0.0.1:8000/logout",
+    logoutURL: "https://kyro-show-recommender-backend.herokuapp.com/logout",
+
     // registerURL: "http://127.0.0.1:8000/register",
     registerURL: "https://kyro-show-recommender-backend.herokuapp.com/register",
+
     // apiURL: "http://127.0.0.1:8000",
     apiURL: "https://kyro-show-recommender-backend.herokuapp.com",
 

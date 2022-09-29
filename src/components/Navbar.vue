@@ -41,13 +41,17 @@ export default {
     },
 
     methods: {
-        logoutUser(){
-        this.store.isLoggedIn = false;
-        this.$cookies.remove("is_logged_in")
-        this.$cookies.remove("csrf_token")
-        this.$cookies.remove("auth_token")
-        this.$router.push('/about')
-        localStorage.clear()
+        async logoutUser(){
+
+            await axios.post(this.store.loginURL,
+                { "Content-Type": "application/json" }
+            )
+            this.store.isLoggedIn = false;
+            this.$cookies.remove("is_logged_in")
+            this.$cookies.remove("csrf_token")
+            this.$cookies.remove("auth_token")
+            this.$router.push('/about')
+            localStorage.clear()
       },
       routeLikedShows(){
         this.$router.push('/liked-shows')

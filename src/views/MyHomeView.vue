@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss">
     main{
-        width: auto;
+        // width: auto;
 
         .heading{
             text-align: center;
