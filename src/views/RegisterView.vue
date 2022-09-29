@@ -61,21 +61,16 @@
                 return;
             }
   
-            const loginData = {
+            const registerData = {
                     "email": this.email,
                     "password": this.password
-                    }
+            }
     
             await axios.post(this.store.registerURL,
-                loginData,
+                registerData,
                 { "Content-Type": "application/json" }
                 )
                 .then((response) => { 
-                    this.store.isLoggedIn = true;
-                    $cookies.set("is_logged_in", true)
-    
-                    $cookies.set("csrf_token", response.data.response.csrf_token)
-                    $cookies.set("auth_token", response.data.response.user.authentication_token)
                     this.$router.push('/login')
                 })
                 .catch((response) => {
