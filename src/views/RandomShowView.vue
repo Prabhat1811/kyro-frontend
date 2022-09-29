@@ -86,7 +86,7 @@ export default {
 
             await axios.get(this.store.apiURL+"/api/history", {'headers' : {
                 "Content-Type": "application/json",
-                "Authentication-Token": this.$cookies.get("auth_token")
+                "Authorization": $cookies.get("access_token")
             }})
             .then(response => this.store.history = response.data)
 
@@ -136,7 +136,7 @@ export default {
 
             const headers = {
                 "Content-Type": "application/json",
-                "Authentication-Token": $cookies.get("auth_token")
+                "Authorization": $cookies.get("access_token")
             }
 
             const data = {

@@ -4,21 +4,20 @@ import axios from 'axios'
 export const myStore = defineStore({
   id: 'myStore',
   state: () => ({
-    // loginURL: "http://127.0.0.1:8000/login?include_auth_token",
-    loginURL: "https://kyro-show-recommender-backend.herokuapp.com/login?include_auth_token",
+    // loginURL: "http://127.0.0.1:8000/api/user/login",
+    loginURL: "https://kyro-recommender-backend.herokuapp.com/api/user/login",
 
-    // logoutURL: "http://127.0.0.1:8000/logout",
-    logoutURL: "https://kyro-show-recommender-backend.herokuapp.com/logout",
+    // logoutURL: "http://127.0.0.1:8000/api/userlogout",
+    // logoutURL: "https://kyro-recommender-backend.herokuapp.com/api/userlogout",
 
-    // registerURL: "http://127.0.0.1:8000/register",
-    registerURL: "https://kyro-show-recommender-backend.herokuapp.com/register",
+    // registerURL: "http://127.0.0.1:8000/api/user/register",
+    registerURL: "https://kyro-recommender-backend.herokuapp.com/api/user/register",
 
     // apiURL: "http://127.0.0.1:8000",
-    apiURL: "https://kyro-show-recommender-backend.herokuapp.com",
+    apiURL: "https://kyro-recommender-backend.herokuapp.com",
 
     showsURL: "https://api.tvmaze.com/shows",
     totalShows: 249,
-    // totalShows: 1,
     availableShows: [],
     history: [],
     likedShows: [],

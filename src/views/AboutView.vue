@@ -5,18 +5,24 @@
             <span>Show</span>
         </div>
         <div class="tag">
-            <p><strong>Show Recommender helps you discover new TV shows.</strong></p>
+            <p><strong>Recommend a Show helps you discover new TV shows.</strong></p>
         </div>
-        <div class="my-buttons">
+        <div class="my-buttons"  v-if="!store.isLoggedIn">
             <button type="button" class="btn btn-outline-dark" @click="routeLogin">Sign In</button>
         </div>
     </main>
 </template>
 
 <script>
+import { myStore } from '@/stores/counter'
 import router from '../router';
 
 export default {
+    setup(){
+      const store = myStore()
+    //   const { newStore } = storeToRefs(store)
+      return { store }
+    },
     data() {
         return {
 

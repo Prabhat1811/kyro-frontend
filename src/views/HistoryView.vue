@@ -39,7 +39,7 @@ export default {
         async getHistory(){
             await axios.get(this.store.apiURL+"/api/history", {'headers' : {
                 "Content-Type": "application/json",
-                "Authentication-Token": this.$cookies.get("auth_token")
+                "Authorization": $cookies.get("access_token")
             }})
             .then(response => this.store.history = response.data)
         },
@@ -73,7 +73,7 @@ export default {
 
             const headers = {
                 "Content-Type": "application/json",
-                "Authentication-Token": $cookies.get("auth_token")
+                "Authorization": $cookies.get("access_token")
             }
 
             await axios({
@@ -103,10 +103,9 @@ export default {
 
 <style lang="scss">
     main{
-        
         min-height: 100vh;
-        margin-top: 2%;
-        width: 75em;
+        width: 75rem;
+        // width: 75%;
 
         .my-header{
 
@@ -135,19 +134,14 @@ export default {
         .my-div{
             display: flex;
             flex-direction: column;
-            button{
-                width: auto;
-                margin-bottom: 50px;
-                
-                @media (max-width: 1024px) {
-                    width: 100%;
-                    margin: auto;
-                }
+            
+            @media (max-width: 1024px) {
+                margin-bottom: 25px;
             }
         }
         @media (max-width: 1024px) {
             margin-top: 5%;
-            width: 75em;
+            width: 20rem;
         }
     }
 </style>

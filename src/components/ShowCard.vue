@@ -55,7 +55,7 @@ export default {
 
             const headers = {
                 "Content-Type": "application/json",
-                "Authentication-Token": $cookies.get("auth_token")
+                "Authorization": $cookies.get("access_token")
             }
 
             const data = {

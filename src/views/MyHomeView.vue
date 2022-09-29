@@ -41,27 +41,10 @@ export default {
             router.push("/random-show")
         },
 
-        async getHistory(){
-            await axios.get(this.store.apiURL+"/api/history", {'headers' : { 
-                "Content-Type": "application/json",
-                "Authentication-Token": this.$cookies.get("auth_token")
-            }})
-            .then(response => this.store.updateHistory(response.data))
-        },
-
-        async getLikedShows(){
-            await axios.get(this.store.apiURL+"/api/liked_shows", {'headers' : {
-                "Content-Type": "application/json",
-                "Authentication-Token": this.$cookies.get("auth_token")
-            }})
-            .then(response => this.store.updateLikedShows(response.data))
-            // .then(console.log(this.store.likedShows))
-        },
-
         async getUserEmail(){
             await axios.get(this.store.apiURL+"/api/user", {'headers' : { 
-                    "Content-Type": "application/json",
-                    "Authentication-Token": this.$cookies.get("auth_token")
+                    // "Content-Type": "application/json",
+                    "Authorization": this.$cookies.get("access_token")
                 }})
                 .then((response) => {
                     localStorage.setItem("email_id", response.data["email"])
@@ -76,7 +59,7 @@ export default {
 
 <style lang="scss">
     main{
-        // width: auto;
+        margin: auto;
 
         .heading{
             text-align: center;

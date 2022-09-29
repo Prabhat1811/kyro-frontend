@@ -37,7 +37,7 @@ export default {
         async fetchLikedShows(){
             await axios.get(this.store.apiURL+"/api/liked_shows", {'headers' : { 
                 "Content-Type": "application/json",
-                "Authentication-Token": this.$cookies.get("auth_token")
+                "Authorization": $cookies.get("access_token")
             }})
             .then(response => this.likedShows = response.data)
 
@@ -72,10 +72,9 @@ export default {
 
 <style lang="scss">
     main{
-        
+        margin: auto;
         min-height: 100vh;
         margin-top: 7.5%;
-        width: 75em;
 
         .my-header{
 
@@ -92,31 +91,18 @@ export default {
                     margin-bottom: 5%;
                 }
             }
-            button{
-                margin-top: 10%;
-                @media (max-width: 1024px) {
-                    margin-top: 0;
-                    margin-bottom: 5%;
-                }
-            }
         }
         
         .my-div{
             display: flex;
             flex-direction: column;
-            button{
-                width: auto;
-                margin-bottom: 50px;
 
-                @media (max-width: 1024px) {
-                    width: 100%;
-                    margin: auto;
-                }
+            @media (max-width: 1024px) {
+                margin-bottom: 25px;
             }
         }
         @media (max-width: 1024px) {
             margin-top: 5%;
-            width: 75em;
         }
     }
 </style>

@@ -21,7 +21,7 @@
               <input type="password" class="form-control" id="confirmPassword" v-model="confirmPassword">
             </div>
   
-            <button type="submit" class="btn btn-primary" value="Login" id="submit">Login</button>
+            <button type="submit" class="btn btn-primary" value="Login" id="submit">Register</button>
   
             <p class="error-msg">{{ errorMessage }}</p>
           </form>
@@ -80,7 +80,7 @@
                 })
                 .catch((response) => {
                   //handle error
-                  this.errorMessage = response.response.data.response.errors[0]
+                  this.errorMessage = response.response.data["msg"]
                 });
   
         }

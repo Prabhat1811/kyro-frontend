@@ -62,14 +62,12 @@ export default {
           .then((response) => { 
               this.store.isLoggedIn = true;
               $cookies.set("is_logged_in", true)
-
-              $cookies.set("csrf_token", response.data.response.csrf_token)
-              $cookies.set("auth_token", response.data.response.user.authentication_token)
+              $cookies.set("access_token", "Bearer".concat(" ", response.data["access_token"]))
               this.$router.push('/')
           })
           .catch((response) => {
             //handle error
-            this.errorMessage = response.response.data.response.errors[0]
+            this.errorMessage = response.response.data["msg"]
           });
 
       }
