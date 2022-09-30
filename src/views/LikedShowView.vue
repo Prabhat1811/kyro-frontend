@@ -74,7 +74,8 @@ export default {
     main{
         margin: auto;
         min-height: 100vh;
-        margin-top: 7.5%;
+        margin-top: 5rem;
+        width: 75rem;
 
         .my-header{
 
@@ -103,6 +104,7 @@ export default {
         }
         @media (max-width: 1024px) {
             margin-top: 5%;
+            width: 20rem;
         }
     }
 </style>
