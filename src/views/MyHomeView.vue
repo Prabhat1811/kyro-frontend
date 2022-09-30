@@ -7,7 +7,7 @@
         <div class="my-buttons">
             <div class="row">
                 <button type="button" class="btn btn-outline-dark" @click="routeRandomShow">Random Show</button>
-                <button type="button" class="btn btn-secondary" disabled>Show by Choice</button>
+                <button type="button" class="btn btn-secondary" disabled>Shows by Choice</button>
             </div>
             <div class="row">
                 <button type="button" class="btn btn-secondary" disabled>Shows for you</button>
