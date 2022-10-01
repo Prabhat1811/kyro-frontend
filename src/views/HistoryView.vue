@@ -1,7 +1,7 @@
 <template>
-    <main>
+    <main style="padding: 0; margin: 0; height: 100vh;">
         <div class="my-header">
-            <h1>History</h1>
+            <h1><strong>History</strong></h1>
             <button type="button" class="btn btn-danger" @click="deleteHistory">Delete History</button>
         </div>
 
@@ -37,7 +37,7 @@ export default {
     methods: {
 
         async getHistory(){
-            await axios.get(this.store.apiURL+"/api/history", {'headers' : {
+            await axios.get(this.store.baseURL+"/api/history", {'headers' : {
                 "Content-Type": "application/json",
                 "Authorization": $cookies.get("access_token")
             }})
@@ -48,7 +48,7 @@ export default {
 
             await this.getHistory()
 
-                for (let i = 0; i < this.store.history.length; i++){
+            for (let i = 0; i < this.store.history.length; i++){
 
                 const id = this.store.history[i]["show_id"]
 
@@ -78,7 +78,7 @@ export default {
 
             await axios({
                 method: "delete",
-                url: this.store.apiURL+"/api/history",
+                url: this.store.baseURL+"/api/history",
                 headers: headers
             })
             .then(() => {
@@ -105,42 +105,38 @@ export default {
     main{
         min-height: 100vh;
         width: 75rem;
-        // width: 75%;
 
         .my-header{
-
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-
+            margin-bottom: 5%;
+            margin-top: 5rem;
 
             h1{
-                text-align: center;
-                margin-top: 10%;
-                font-weight: bold;
-                @media (max-width: 1024px) {
-                    margin-top: 0;
-                    margin-bottom: 5%;
-                }
+                margin: auto;
+                margin-bottom: 10px;
+                
             }
             button{
-                margin-top: 10%;
-                @media (max-width: 1024px) {
+                width: 50%;
+                margin: auto;
+            }
+            @media (max-width: 1024px) {
                     margin-top: 0;
                     margin-bottom: 5%;
                 }
-            }
         }
         
         .my-div{
             display: flex;
             flex-direction: column;
-            
+
             @media (max-width: 1024px) {
                 margin-bottom: 25px;
             }
         }
         @media (max-width: 1024px) {
-            margin-top: 5%;
             width: 20rem;
         }
     }

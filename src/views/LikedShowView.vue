@@ -1,6 +1,6 @@
 <template>
     <main>
-        <h1 class="my-header">Liked Shows</h1>
+        <h1 class="my-header"><strong>Liked Shows</strong></h1>
 
         <div class="my-div" :key="show.id" v-for="show in this.showInfo">
             <ShowCard :id="show.id" :name="show.name" :type="show.type" :language="show.language" :genre="show.genre"
@@ -35,7 +35,7 @@ export default {
     methods: {
 
         async fetchLikedShows(){
-            await axios.get(this.store.apiURL+"/api/liked_shows", {'headers' : { 
+            await axios.get(this.store.baseURL+"/api/liked_shows", {'headers' : { 
                 "Content-Type": "application/json",
                 "Authorization": $cookies.get("access_token")
             }})

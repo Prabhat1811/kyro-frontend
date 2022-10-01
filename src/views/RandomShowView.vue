@@ -1,5 +1,9 @@
 <template>
-    <main>
+    <main style="padding: 0; margin: 0; height: 100vh;">
+        <div class="my-header">
+            <h1><strong>Random Show</strong></h1>
+        </div>
+
         <div class="spinner-border" role="status" id="my-spinner">
             <span class="visually-hidden">Loading...</span>
         </div>
@@ -84,7 +88,7 @@ export default {
         },
         async initShows(){
 
-            await axios.get(this.store.apiURL+"/api/history", {'headers' : {
+            await axios.get(this.store.baseURL+"/api/history", {'headers' : {
                 "Content-Type": "application/json",
                 "Authorization": $cookies.get("access_token")
             }})
@@ -106,9 +110,8 @@ export default {
         },
 
         async fetchShow() {
-            this.showSpinner();
-            if (this.moreShows() === false){
-            }
+            this.showSpinner()
+            this.moreShows()
 
             this.id = this.store.availableShows[Math.floor((Math.random() * (this.store.availableShows.length-1)))]
 
@@ -145,7 +148,7 @@ export default {
 
             await axios({
                 method: "post",
-                url: this.store.apiURL+"/api/history",
+                url: this.store.baseURL+"/api/history",
                 data: data,
                 headers: headers
             })
@@ -180,6 +183,21 @@ export default {
     #my-spinner{
         margin: auto;
     }
+
+    .my-header{
+
+            h1{
+                text-align: center;
+                margin-bottom: 10px;
+                
+            }
+
+            @media (max-width: 1024px) {
+                    margin-top: 0;
+                    margin-bottom: 5%;
+                }
+        }
+
     .error{
         display: none;
         width: auto;
@@ -206,6 +224,7 @@ export default {
             @media (max-width: 1024px) {
                 width: 100%;
                 margin: auto;
+                margin-bottom: 25px;
             }
         }
     }
@@ -227,6 +246,7 @@ export default {
             @media (max-width: 1024px) {
                 width: 100%;
                 margin: auto;
+                margin-bottom: 25px;
             }
         }
     }

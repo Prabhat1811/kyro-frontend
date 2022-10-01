@@ -20,5 +20,11 @@ header {
   max-height: 100vh;
   padding: 0;
   margin: 0;
+  margin-bottom: 10vh;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 7.5vh;
+  }
+
 }
 </style>
