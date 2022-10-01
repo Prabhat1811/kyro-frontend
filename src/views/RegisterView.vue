@@ -66,7 +66,7 @@
                     "password": this.password
             }
     
-            await axios.post(this.store.registerURL,
+            await axios.post(this.store.baseURL+"/api/user/register",
                 registerData,
                 { "Content-Type": "application/json" }
                 )

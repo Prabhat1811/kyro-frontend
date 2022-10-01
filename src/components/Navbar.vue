@@ -92,13 +92,13 @@ export default {
         }
     }
 
-    @media (min-width: 280px) {
+    @media (min-width: 345px) {
         .short-text{
                 display: none;
         }
     }
 
-    @media (max-width: 280px) {
+    @media (max-width: 345px) {
         .full-text{
             display: none;
         }

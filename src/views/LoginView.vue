@@ -55,7 +55,7 @@ export default {
                 "password": this.password
               }
 
-        await axios.post(this.store.loginURL,
+        await axios.post(this.store.baseURL+"/api/user/login",
           loginData,
           { "Content-Type": "application/json" }
           )

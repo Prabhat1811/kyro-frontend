@@ -56,6 +56,11 @@ const router = createRouter({
       }
     },
     {
+      path: '/shows-by-genre',
+      name: 'shows_by_genre',
+      component: () => import('@/views/ShowsByGenre.vue')
+    },
+    {
       path: "/:catchAll(.*)",
       redirect: '/',
     }

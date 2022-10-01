@@ -1,7 +1,7 @@
 <template>
 
     <div class="my-card card w-65">
-        <img :src= image class="card-img-top" alt="image">
+        <img :src= image class="card-img-top my-image" alt="image">
         <div class="my-card-body">
             <div class="card-body">
                 <h5 class="card-title"><strong>{{ name }}</strong></h5>
@@ -9,15 +9,18 @@
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"></li>
-                <li class="list-group-item">Type - {{ type }}</li>
-                <li class="list-group-item">Language - {{ language }}</li>
-                <li class="list-group-item">Genre - {{ genre }}</li>
-                <li class="list-group-item">Status - {{ status }}</li>
-                <li class="list-group-item">Rating - {{ rating }}</li>
+                <li class="list-group-item"><strong>Type</strong> - {{ type }}</li>
+                <li class="list-group-item"><strong>Language</strong> - {{ language }}</li>
+                <li class="list-group-item"><strong>Genre</strong> - {{ genre }}</li>
+                <li class="list-group-item"><strong>Status</strong> - {{ status }}</li>
+                <li class="list-group-item"><strong>Rating</strong> - {{ rating }}</li>
                 <li class="list-group-item"></li>
             </ul>
             <div class="card-body">
-                <a href="#" class="card-link" @click="likeShow()">Like</a>
+                <a href="#" class="card-link">
+                    <span class="material-icons my-heart" @click="likeShow()">favorite_border</span>
+                </a>
+                <!-- <span class="material-icons card-link" @click="likeShow()">favorite_border</span> -->
             </div>
         </div>
     </div>
@@ -68,9 +71,16 @@ export default {
 
             await axios({
                 method: "post",
-                url: this.store.apiURL+"/api/liked_shows",
+                url: this.store.baseURL+"/api/liked_shows",
                 data: data,
                 headers: headers
+            })
+            .then(() => {
+
+                // Change the color of heart
+                // $('.my-heart').css('color', 'red');
+                // $('.my-heart').css('background-color', '');
+
             })
             .catch((response) => {
                 //handle error
@@ -85,13 +95,10 @@ export default {
 
     .my-card{
         margin: auto auto;
-        margin-top: 4vw;
         margin-bottom: 15px;
         display: flex;
         flex-direction: row;
         width: auto;
-
-        // 77aaff
 
         padding: 10px;
         border: 1px solid #999;
@@ -106,9 +113,22 @@ export default {
             flex-direction: column;
         }
 
+        .my-image{
+            margin: auto;
+            width: auto;
+        }
+
         .my-card-body{
             display: flex;
             flex-direction: column;
+        }
+
+        .my-heart{
+            color: red;
+        }
+
+        a:hover{
+            background-color: transparent;
         }
     }
     

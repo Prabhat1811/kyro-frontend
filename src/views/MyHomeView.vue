@@ -6,15 +6,15 @@
         </div>
         <div class="my-buttons">
             <div class="row">
-                <button type="button" class="btn btn-outline-dark" @click="routeRandomShow">Random Show</button>
-                <button type="button" class="btn btn-secondary" disabled>Shows by Choice</button>
+                <button type="button" class="btn btn-outline-dark" @click="routeRandomShow()">Random Show</button>
+                <button type="button" class="btn btn-outline-dark" @click="routeShowsByGenre()">Shows by Genre</button>
             </div>
             <div class="row">
                 <button type="button" class="btn btn-secondary" disabled>Shows for you</button>
                 <button type="button" class="btn btn-secondary" disabled>Shows streaming now</button>
             </div>
         </div>
-        <p style="text-align:center; color: red">As of now only Random show functionality works. Other functionalities will be available later.</p>
+        <p style="text-align:center; color: red">Other functionalities will be available later.</p>
     </main>
 </template>
 
@@ -37,16 +37,21 @@ export default {
         }
     },
     methods: {
-        async routeRandomShow() {
+        routeRandomShow(){
             router.push("/random-show")
         },
 
+        routeShowsByGenre(){
+            router.push("/shows-by-genre")
+        },
+        
         async getUserEmail(){
-            await axios.get(this.store.apiURL+"/api/user", {'headers' : { 
-                    // "Content-Type": "application/json",
+            await axios.get(this.store.baseURL+"/api/user", {'headers' : { 
+                    "Content-Type": "application/json",
                     "Authorization": this.$cookies.get("access_token")
                 }})
                 .then((response) => {
+                    this.store.email = response.data["email"]
                     localStorage.setItem("email_id", response.data["email"])
                 })
         },
