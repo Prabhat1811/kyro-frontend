@@ -121,7 +121,7 @@ export default {
                 this.store.availableShows.splice(index, 1);
             }
 
-            const show = await axios.get(this.store.showsURL+"/"+this.id)
+            const show = await axios.get(this.store.showsURL+"/shows/"+this.id)
             .then(response => response.data)
             .catch((response) => {
                 this.onError();

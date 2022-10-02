@@ -77,6 +77,12 @@ export default {
             })
             .then(() => {
 
+                const index = this.store.likedShows.indexOf(this.id);
+                if (index == -1){
+                    // this.store.likedShows.splice(index, 1);
+                    this.$emit('dislikeShow', this.id)
+                }
+
                 // Change the color of heart
                 // $('.my-heart').css('color', 'red');
                 // $('.my-heart').css('background-color', '');

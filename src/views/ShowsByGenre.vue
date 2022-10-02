@@ -7,109 +7,113 @@
             <div class="my-checks">
                 <h4>Genre</h4>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Drama" id="flexCheckChecked">
-                    <label class="form-check-label" for="Drama">
-                        Drama
-                    </label>
-                </div>
+                <div class="my-flex-div">
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Action" id="flexCheckChecked">
-                    <label class="form-check-label" for="Action">
-                        Action
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Drama" id="flexCheckChecked">
+                        <label class="form-check-label" for="Drama">
+                            Drama
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Western" id="flexCheckChecked">
-                    <label class="form-check-label" for="Western">
-                        Western
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Action" id="flexCheckChecked">
+                        <label class="form-check-label" for="Action">
+                            Action
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Music" id="flexCheckChecked">
-                    <label class="form-check-label" for="Music">
-                        Music
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Western" id="flexCheckChecked">
+                        <label class="form-check-label" for="Western">
+                            Western
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Thriller" id="flexCheckChecked">
-                    <label class="form-check-label" for="Thriller">
-                        Thriller
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Music" id="flexCheckChecked">
+                        <label class="form-check-label" for="Music">
+                            Music
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Science-Fiction" id="flexCheckChecked">
-                    <label class="form-check-label" for="Science-Fiction">
-                        Science-Fiction
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Thriller" id="flexCheckChecked">
+                        <label class="form-check-label" for="Thriller">
+                            Thriller
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Horror" id="flexCheckChecked">
-                    <label class="form-check-label" for="Horror">
-                        Horror
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Science-Fiction" id="flexCheckChecked">
+                        <label class="form-check-label" for="Science-Fiction">
+                            Science-Fiction
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Romance" id="flexCheckChecked">
-                    <label class="form-check-label" for="Romance">
-                        Romance
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Horror" id="flexCheckChecked">
+                        <label class="form-check-label" for="Horror">
+                            Horror
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Mystery" id="flexCheckChecked">
-                    <label class="form-check-label" for="Mystery">
-                        Mystery
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Romance" id="flexCheckChecked">
+                        <label class="form-check-label" for="Romance">
+                            Romance
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Crime" id="flexCheckChecked">
-                    <label class="form-check-label" for="Crime">
-                        Crime
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Mystery" id="flexCheckChecked">
+                        <label class="form-check-label" for="Mystery">
+                            Mystery
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Adventure" id="flexCheckChecked">
-                    <label class="form-check-label" for="Adventure">
-                        Adventure
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Crime" id="flexCheckChecked">
+                        <label class="form-check-label" for="Crime">
+                            Crime
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Comedy" id="flexCheckChecked">
-                    <label class="form-check-label" for="Comedy">
-                        Comedy
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Adventure" id="flexCheckChecked">
+                        <label class="form-check-label" for="Adventure">
+                            Adventure
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Supernatural" id="flexCheckChecked">
-                    <label class="form-check-label" for="Supernatural">
-                        Supernatural
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Comedy" id="flexCheckChecked">
+                        <label class="form-check-label" for="Comedy">
+                            Comedy
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Anime" id="flexCheckChecked">
-                    <label class="form-check-label" for="Anime">
-                        Anime
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Supernatural" id="flexCheckChecked">
+                        <label class="form-check-label" for="Supernatural">
+                            Supernatural
+                        </label>
+                    </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Fantasy" id="flexCheckChecked">
-                    <label class="form-check-label" for="Fantasy">
-                        Fantasy 
-                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Anime" id="flexCheckChecked">
+                        <label class="form-check-label" for="Anime">
+                            Anime
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Fantasy" id="flexCheckChecked">
+                        <label class="form-check-label" for="Fantasy">
+                            Fantasy 
+                        </label>
+                    </div>
+
                 </div>
 
 
@@ -121,6 +125,7 @@
             <div class="spinner-border" role="status" id="my-spinner">
                 <span class="visually-hidden">Loading...</span>
             </div>
+
 
             <div class="my-div">
                 <div class="my-div" id="my-div" :key="show.id" v-for="show in this.showInfo">
@@ -173,33 +178,33 @@ export default {
     methods: {
         showSpinner(){
             document.getElementById("my-spinner").style.display = "block"
-            // document.getElementById("my-div").style.display = "none"
             document.getElementById("error").style.display = "none"
         },
         hideSpinner(){
             document.getElementById("my-spinner").style.display = "none"
-            // document.getElementById("my-div").style.display = "flex"
         },
         onError(){
-            // document.getElementById("my-div").style.display = "none"
             document.getElementById("my-spinner").style.display = "none"
             document.getElementById("error").style.display = "block"
 
         },
 
         async fetchShows() {
-            this.showSpinner()
+            // this.showSpinner()
             this.showInfo = []
 
             let genreSelected = []
             $('.my-checks input:checked').each(function() {
                 genreSelected.push($(this).attr('value'))
             });
-            
-            for (let i = 1; i < 100; i++){
-                console.log("Inside Func")
 
-                await axios.get(this.store.showsURL+"/"+i)
+            if (genreSelected.length != 0){
+                this.showSpinner()
+            }
+            
+            for (let i = 1; i < this.store.totalShows; i++){
+
+                await axios.get(this.store.showsURL+"/shows/"+i)
                 .then((response) => {
 
                     if (response.data["status"] != "404" & response.data["genres"].some(r => genreSelected.indexOf(r) >= 0)){
@@ -215,7 +220,6 @@ export default {
                             "summary": response.data["summary"]
                         }
                         this.showInfo = [...this.showInfo, data]
-                        console.log(data)
                     }
                 })
                 .catch((response) => {
@@ -240,7 +244,7 @@ export default {
         
         @media (max-width: 1024px) {
             margin: auto;
-            margin-bottom: 10p;
+            margin-bottom: 10px;
         }
     }
 
@@ -252,6 +256,8 @@ export default {
         .my-header{
             display: flex;
             justify-content: space-between;
+            position: sticky;
+            top: 5rem;
 
 
             h3{
@@ -265,12 +271,19 @@ export default {
                     margin-bottom: 5%;
                 }
             }
+
+            @media (max-width: 1024px) {
+                position: relative;
+                top: 0;
+            }
         }
 
 
         .my-checks{
             float:left;
             width: 20%;
+            position: sticky;
+            top: 7.5rem;
 
             margin-right: 10%;
             border-right: 1px solid grey;
@@ -278,6 +291,19 @@ export default {
 
             h4{
                 margin-bottom: 15px;
+            }
+
+            .my-flex-div{
+                display: flex;
+                flex-wrap: wrap;
+
+                .form-check{
+                    margin: 5px;
+                }
+
+                @media (min-width: 720px) {
+                    flex-direction: column;
+                }
             }
 
             button{
@@ -299,6 +325,8 @@ export default {
                 flex-wrap: wrap;
                 border-right: 0;
                 margin-bottom: 25px;
+                position: relative;
+                top: 0;
             }
 
         }
