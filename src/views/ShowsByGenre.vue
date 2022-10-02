@@ -237,6 +237,11 @@ export default {
         margin: auto;
         margin-left: 60%;
         margin-bottom: 10px;
+        
+        @media (max-width: 1024px) {
+            margin: auto;
+            margin-bottom: 10p;
+        }
     }
 
 
@@ -284,7 +289,6 @@ export default {
                 float: none;
                 width: auto;
                 display: flex;
-                // flex-direction: row;
                 flex-direction: column;
                 flex-wrap: wrap;
                 border-right: 0;
