@@ -283,9 +283,15 @@ export default {
             button{
                 margin-top: 25px;
                 max-width: 150px;
+                @media (max-width: 720px) {
+                    margin-bottom: 10px;
+                }
+
             }
 
             @media (max-width: 720px) {
+                min-width: 100%;
+                border-bottom: 1px solid grey;
                 float: none;
                 width: auto;
                 display: flex;
