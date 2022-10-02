@@ -4,7 +4,7 @@
 
         <div class="my-div" :key="show.id" v-for="show in this.showInfo">
             <ShowCard :id="show.id" :name="show.name" :type="show.type" :language="show.language" :genre="show.genre"
-                :status="show.status" :rating="show.rating" :image="show.image" :summary="show.summary" />
+                :status="show.status" :rating="show.rating" :image="show.image" :summary="show.summary" v-on:dislikeShow="removeShow($event)" />
          </div>
     </main>
 </template>
@@ -25,7 +25,6 @@ export default {
     },
     data() {
         return {
-            likedShows: [],
             showInfo: []
         }
     },
@@ -39,13 +38,13 @@ export default {
                 "Content-Type": "application/json",
                 "Authorization": $cookies.get("access_token")
             }})
-            .then(response => this.likedShows = response.data)
+            .then(response => this.store.likedShows = response.data)
 
-            for (let i = 0; i < this.likedShows.length; i++){
+            for (let i = 0; i < this.store.likedShows.length; i++){
 
-                const id = this.likedShows[i]["show_id"]
+                const id = this.store.likedShows[i]["show_id"]
 
-                await axios.get(this.store.showsURL+"/"+id)
+                await axios.get(this.store.showsURL+"/shows/"+id)
                 .then((response) => {
                     const data = {
                         "id": response.data["id"],
@@ -61,6 +60,16 @@ export default {
                     this.showInfo = [...this.showInfo, data]
                 })
             }
+        },
+
+        removeShow(id){
+            for (let i = 0; i < this.showInfo.length; i++){
+                if (this.showInfo[i]["id"] == id) {
+                    this.showInfo.splice(i, 1);
+                    break
+                }
+            }
+
         }
     },
     beforeMount(){

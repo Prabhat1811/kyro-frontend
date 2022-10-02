@@ -61,6 +61,11 @@ const router = createRouter({
       component: () => import('@/views/ShowsByGenre.vue')
     },
     {
+      path: '/shows-streaming-now',
+      name: 'shows_streaming_now',
+      component: () => import('@/views/ShowsStreamingNow.vue')
+    },
+    {
       path: "/:catchAll(.*)",
       redirect: '/',
     }

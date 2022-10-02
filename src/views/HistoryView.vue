@@ -46,14 +46,13 @@ export default {
 
         async fetchHistoryShows(){
 
-
             await this.getHistory()
 
             for (let i = 0; i < this.store.history.length; i++){
 
                 const id = this.store.history[i]["show_id"]
 
-                await axios.get(this.store.showsURL+"/"+id)
+                await axios.get(this.store.showsURL+"/shows/"+id)
                 .then((response) => {
                     const data = {
                         "id": response.data["id"],

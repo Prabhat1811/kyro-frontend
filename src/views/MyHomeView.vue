@@ -10,8 +10,8 @@
                 <button type="button" class="btn btn-outline-dark" @click="routeShowsByGenre()">Shows by Genre</button>
             </div>
             <div class="row">
+                <button type="button" class="btn btn-outline-dark" @click="routeShowsStreamingNow()">Shows streaming now</button>
                 <button type="button" class="btn btn-secondary" disabled>Shows for you</button>
-                <button type="button" class="btn btn-secondary" disabled>Shows streaming now</button>
             </div>
         </div>
         <p style="text-align:center; color: red">Other functionalities will be available later.</p>
@@ -43,6 +43,10 @@ export default {
 
         routeShowsByGenre(){
             router.push("/shows-by-genre")
+        },
+
+        routeShowsStreamingNow(){
+            router.push("/shows-streaming-now")
         },
         
         async getUserEmail(){

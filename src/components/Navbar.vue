@@ -88,7 +88,8 @@ export default {
     @media (max-width: 1024px) {
         .my-navbar{
             background-color: #8dd7cf;
-            padding: 0;
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
