@@ -277,10 +277,18 @@ export default {
 
             button{
                 margin-top: 25px;
+                max-width: 150px;
             }
 
-            @media (max-width: 1024px) {
-                // float: none;
+            @media (max-width: 720px) {
+                float: none;
+                width: auto;
+                display: flex;
+                // flex-direction: row;
+                flex-direction: column;
+                flex-wrap: wrap;
+                border-right: 0;
+                margin-bottom: 25px;
             }
 
         }
@@ -289,6 +297,12 @@ export default {
             display: flex;
             flex-direction: column;
             margin-right: 5%;
+            margin-bottom: 25px;
+
+            @media (max-width: 720px) {
+                margin: 0;
+                margin-bottom: 25px;
+            }
         }
 
         .error{
@@ -296,5 +310,10 @@ export default {
             width: auto;
             margin: auto;
         }
+        
+        @media (max-width: 720px) {
+            width: 100%;
+        }
+
     }
 </style>

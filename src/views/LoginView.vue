@@ -87,13 +87,14 @@ export default {
     .form-outer{
       display: flex;
       flex-direction: column;
-      width: 50%;
+      width: 65%;
       margin: 0 auto;
       padding: 1rem;
 
       @media (max-width: 768px) {
         width: 100%;
         margin-top: 20%;
+        // padding: 0;
       }
 
       h1{

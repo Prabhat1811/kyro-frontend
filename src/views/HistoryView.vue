@@ -137,7 +137,7 @@ export default {
             }
         }
         @media (max-width: 1024px) {
-            width: 20rem;
+            width: 100%;
         }
     }
 </style>

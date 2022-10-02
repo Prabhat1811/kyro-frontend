@@ -127,6 +127,10 @@ export default {
             color: red;
         }
 
+        .my-heart:hover{
+            color: purple;
+        }
+
         a:hover{
             background-color: transparent;
         }
