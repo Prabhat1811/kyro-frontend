@@ -55,6 +55,8 @@
   
       methods: {
         async onSubmit(e){
+          
+          this.errorMessage = ""
 
             if (this.password !== this.confirmPassword){
                 this.errorMessage = "Passwords don't match"

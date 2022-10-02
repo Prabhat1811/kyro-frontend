@@ -44,7 +44,8 @@ export default {
             .then(response => this.store.history = response.data)
         },
 
-        async fetchLikedShows(){
+        async fetchHistoryShows(){
+
 
             await this.getHistory()
 
@@ -91,11 +92,12 @@ export default {
                 //handle error
                 // this.errorMessage = response.response.data.response.errors[0]
                 console.log(response)
-            })
+                })
+
         }
     },
     beforeMount(){
-        this.fetchLikedShows()
+        this.fetchHistoryShows()
     }
 }
 
@@ -103,6 +105,7 @@ export default {
 
 <style lang="scss">
     main{
+
         min-height: 100vh;
         width: 75rem;
 

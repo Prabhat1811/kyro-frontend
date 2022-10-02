@@ -49,6 +49,8 @@ export default {
 
     methods: {
       async onSubmit(e){
+        
+        this.errorMessage = ""
 
         const loginData = {
                 "email": this.email,
@@ -94,7 +96,6 @@ export default {
       @media (max-width: 768px) {
         width: 100%;
         margin-top: 20%;
-        // padding: 0;
       }
 
       h1{
