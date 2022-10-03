@@ -207,14 +207,6 @@ export default {
                 await axios.get(this.store.showsURL+"/shows/"+i)
                 .then((response) => {
 
-                    let imgURL = ""
-                    if (this.episodes[i]["show"]["image"] != null && "medium" in this.episodes[i]["show"]["image"]){
-                        imgURL = this.episodes[i]["show"]["image"]["medium"]
-                    }
-                    else{
-                        imgURL = this.store.backupImgURL
-                    }
-
                     if (response.data["status"] != "404" & response.data["genres"].some(r => genreSelected.indexOf(r) >= 0)){
                         const data = {
                             "id": response.data["id"],
@@ -224,7 +216,7 @@ export default {
                             "genre": response.data["genres"].join(", "),
                             "status": response.data["status"],
                             "rating": response.data["rating"]["average"],
-                            "image": imgURL,
+                            "image": response.data["image"]["medium"],
                             "summary": response.data["summary"]
                         }
                         this.showInfo = [...this.showInfo, data]

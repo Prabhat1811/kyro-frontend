@@ -121,7 +121,6 @@ export default {
                 this.store.availableShows.splice(index, 1);
             }
 
-
             const show = await axios.get(this.store.showsURL+"/shows/"+this.id)
             .then(response => response.data)
             .catch((response) => {
@@ -136,8 +135,6 @@ export default {
             this.rating = show["rating"]["average"]
             this.image = show["image"]["medium"]
             this.summary = show["summary"]
-
-
 
             const headers = {
                 "Content-Type": "application/json",
