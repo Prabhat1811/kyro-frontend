@@ -127,12 +127,8 @@ export default {
             this.showInfo = []
 
             let country = $(".my-checks input:checked").val();
-            console.log(country)
 
             let today = new Date().toISOString().slice(0, 10)
-            console.log(today)
-
-            console.log(this.store.showsURL+"/schedule?date="+today+"&country="+country)
 
 
             // Get all episodes streaming now
@@ -141,7 +137,7 @@ export default {
                 this.episodes = response.data
             })
             .catch((response) => {
-
+                this.hideSpinner()
             })
 
 
@@ -151,6 +147,13 @@ export default {
                 const index = this.distinctShows.indexOf(this.episodes[i]["show"]["id"]);
 
                 if (index == -1) {
+                    let imgURL = ""
+                    if (this.episodes[i]["show"]["image"] != null && "medium" in this.episodes[i]["show"]["image"]){
+                        imgURL = this.episodes[i]["show"]["image"]["medium"]
+                    }
+                    else{
+                        imgURL = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
+                    }
                 
                     const data = {
                         "id": this.episodes[i]["show"]["id"],
@@ -160,19 +163,19 @@ export default {
                         "genre": this.episodes[i]["show"]["genres"].join(", "),
                         "status": this.episodes[i]["show"]["status"],
                         "rating": this.episodes[i]["show"]["rating"]["average"],
-                        "image": this.episodes[i]["show"]["image"]["medium"],
+                        // "image": this.episodes[i]["show"]["image"]["medium"],
+                        "image": imgURL,
                         "summary": this.episodes[i]["show"]["summary"]
                     }
 
                     this.showInfo = [...this.showInfo, data]
                     this.distinctShows = [...this.distinctShows, this.episodes[i]["show"]["id"]]
                 }
-
             }
-            console.log(this.showInfo)
 
-            this.hideSpinner()
-        },
+                this.hideSpinner()
+        }
+
     },
     mounted() {
         this.hideSpinner()
