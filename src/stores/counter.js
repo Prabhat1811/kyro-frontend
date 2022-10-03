@@ -8,6 +8,8 @@ export const myStore = defineStore({
     // baseURL: "http://127.0.0.1:8000",
 
     showsURL: "https://api.tvmaze.com",
+
+    backupImgURL: "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg",
     totalShows: 250,
     availableShows: [],
     history: [],

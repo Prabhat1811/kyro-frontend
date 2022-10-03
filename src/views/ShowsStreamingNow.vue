@@ -152,7 +152,7 @@ export default {
                         imgURL = this.episodes[i]["show"]["image"]["medium"]
                     }
                     else{
-                        imgURL = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
+                        imgURL = this.store.backupImgURL
                     }
                 
                     const data = {
@@ -163,7 +163,6 @@ export default {
                         "genre": this.episodes[i]["show"]["genres"].join(", "),
                         "status": this.episodes[i]["show"]["status"],
                         "rating": this.episodes[i]["show"]["rating"]["average"],
-                        // "image": this.episodes[i]["show"]["image"]["medium"],
                         "image": imgURL,
                         "summary": this.episodes[i]["show"]["summary"]
                     }

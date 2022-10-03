@@ -46,6 +46,15 @@ export default {
 
                 await axios.get(this.store.showsURL+"/shows/"+id)
                 .then((response) => {
+
+                    let imgURL = ""
+                    if (response.data["image"] != null && "medium" in response.data["image"]){
+                        imgURL = response.data["image"]["medium"]
+                    }
+                    else{
+                        imgURL = this.store.backupImgURL
+                    }
+
                     const data = {
                         "id": response.data["id"],
                         "name": response.data["name"],
@@ -54,7 +63,7 @@ export default {
                         "genre": response.data["genres"].join(", "),
                         "status": response.data["status"],
                         "rating": response.data["rating"]["average"],
-                        "image": response.data["image"]["medium"],
+                        "image": imgURL,
                         "summary": response.data["summary"]
                     }
                     this.showInfo = [...this.showInfo, data]
