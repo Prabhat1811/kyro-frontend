@@ -14,7 +14,7 @@
                 <button type="button" class="btn btn-secondary" disabled>Shows for you</button>
             </div>
         </div>
-        <p style="text-align:center; color: red">Other functionalities will be available later.</p>
+        <p style="text-align:center; color: red">Shows for you is not available now.</p>
     </main>
 </template>
 
