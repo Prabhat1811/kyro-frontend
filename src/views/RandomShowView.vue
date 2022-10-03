@@ -80,7 +80,7 @@ export default {
 
         },
         moreShows(){
-        if (this.store.availableShows.length >= this.store.totalShows.length){
+        if (this.store.availableShows.length >= this.store.totalShows){
                 this.onError()
                 return false
             }
