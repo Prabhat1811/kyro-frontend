@@ -10,9 +10,9 @@
                 <div class="my-flex-div">
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="countryCodes" value="IN" id="India">
-                        <label class="form-check-label" for="India">
-                            India
+                        <input class="form-check-input" type="radio" name="countryCodes" value="KR" id="South Korea">
+                        <label class="form-check-label" for="South Korea">
+                            South Korea
                         </label>
                     </div>
 
