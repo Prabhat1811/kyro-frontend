@@ -121,45 +121,22 @@ export default {
                 this.store.availableShows.splice(index, 1);
             }
 
-            const show = await axios.get(this.store.showsURL+"/shows/"+this.id)
-            .then((response) => {
-                let imgURL = ""
-                if (response.data["image"] != null && "medium" in response.data["image"]){
-                    imgURL = response.data["image"]["medium"]
-                }
-                else{
-                    imgURL = this.store.backupImgURL
-                }
 
-                this.name = response.data["name"]
-                this.type = response.data["type"]
-                this.language = response.data["language"]
-                this.genre = response.data["genres"].join(", ")
-                this.status = response.data["status"]
-                this.rating = response.data["rating"]["average"]
-                this.image = imgURL
-                this.summary = response.data["summary"]
-            })
+            const show = await axios.get(this.store.showsURL+"/shows/"+this.id)
+            .then(response => response.data)
             .catch((response) => {
                 this.onError();
             })
 
-            // let imgURL = ""
-            // if (response.data["image"] != null && "medium" in response.data["image"]){
-            //     imgURL = response.data["image"]["medium"]
-            // }
-            // else{
-            //     imgURL = this.store.backupImgURL
-            // }
+            this.name = show["name"]
+            this.type = show["type"]
+            this.language = show["language"]
+            this.genre = show["genres"].join(", ")
+            this.status = show["status"]
+            this.rating = show["rating"]["average"]
+            this.image = show["image"]["medium"]
+            this.summary = show["summary"]
 
-            // this.name = show["name"]
-            // this.type = show["type"]
-            // this.language = show["language"]
-            // this.genre = show["genres"].join(", ")
-            // this.status = show["status"]
-            // this.rating = show["rating"]["average"]
-            // this.image = imgURL
-            // this.summary = show["summary"]
 
 
             const headers = {
