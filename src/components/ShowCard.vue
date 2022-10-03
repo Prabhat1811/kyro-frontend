@@ -122,6 +122,7 @@ export default {
         .my-image{
             margin: auto;
             width: auto;
+            max-width: 100%;
         }
 
         .my-card-body{
