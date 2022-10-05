@@ -58,12 +58,18 @@ const router = createRouter({
     {
       path: '/shows-by-genre',
       name: 'shows_by_genre',
-      component: () => import('@/views/ShowsByGenre.vue')
+      component: () => import('@/views/ShowsByGenre.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/shows-streaming-now',
       name: 'shows_streaming_now',
-      component: () => import('@/views/ShowsStreamingNow.vue')
+      component: () => import('@/views/ShowsStreamingNow.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: "/:catchAll(.*)",
