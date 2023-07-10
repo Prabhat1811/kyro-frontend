@@ -4,7 +4,7 @@ import axios from 'axios'
 export const myStore = defineStore({
   id: 'myStore',
   state: () => ({
-    baseURL: "https://kyro-recommender-backend.herokuapp.com",
+    baseURL: "https://gloomy-night.onrender.com",
     // baseURL: "http://127.0.0.1:8000",
 
     showsURL: "https://api.tvmaze.com",
