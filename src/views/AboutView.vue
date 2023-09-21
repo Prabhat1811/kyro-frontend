@@ -15,12 +15,15 @@
 
 <script>
 import { myStore } from '@/stores/counter'
+import { storeToRefs } from 'pinia'
 import router from '../router';
+import axios from 'axios'
 
 export default {
-    setup(){
+   setup(){
       const store = myStore()
-    //   const { newStore } = storeToRefs(store)
+      const { newStore } = storeToRefs(store)
+
       return { store }
     },
     data() {
