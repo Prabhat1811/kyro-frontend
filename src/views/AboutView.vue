@@ -41,7 +41,7 @@ export default {
         }
     },
     beforeMount(){
-        await this.WakeBackend()
+        this.WakeBackend()
     }
 }
 </script>
