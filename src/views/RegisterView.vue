@@ -1,7 +1,7 @@
 <template>
     <main class="login-page">
       <div class="form-outer">
-  
+        <p style="text-align:center; color: green">Initially, please expect a delay in fulfilling the request, as I am currently operating under a free plan, which may result in longer processing times.</p>
         <div class="form-inner">
           <form class="row g-3 needs-validation border rounded" id="myForm" method="POST" @submit.prevent="onSubmit">
             <h1>Register</h1>
