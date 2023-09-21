@@ -31,9 +31,17 @@ export default {
     components: {
     },
     methods: {
+        async WakeBackend(){
+            await axios.get(this.store.baseURL+"/", {'headers' : {
+                "Content-Type": "application/json",
+            }})
+        },
         async routeLogin() {
             router.push("/login")
         }
+    },
+    beforeMount(){
+        await this.WakeBackend()
     }
 }
 </script>
